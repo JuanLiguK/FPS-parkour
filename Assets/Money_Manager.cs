@@ -16,8 +16,11 @@ public class Money_Manager : MonoBehaviour
     public void UpdateMoney(float moneyToAdd)
     {
         if (money + moneyToAdd < 0)
+        {
             money += moneyToAdd;
-        return;
-    }
-    money += moneyToAdd; 
+            return;
+        }
+          money += moneyToAdd; 
 }
+    }
+  
