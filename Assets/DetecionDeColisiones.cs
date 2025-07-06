@@ -9,7 +9,8 @@ public class DetecionDeColisiones : MonoBehaviour
 
         if (collision.gameObject.name == "Player")
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
-}
+};
+
