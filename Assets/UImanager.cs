@@ -5,19 +5,16 @@ using TMPro;
 
 public class UImanager : MonoBehaviour
 {
-
     public TextMeshProUGUI txtMoney;
 
     public void UpdateMoneyTxt(string moneyAmount)
     {
         txtMoney.text = moneyAmount;
     }
-    // Update is called once per frame
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // Puedes inicializar el texto si quieres
+        UpdateMoneyTxt("0");
     }
- 
 }

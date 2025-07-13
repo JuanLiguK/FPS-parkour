@@ -7,20 +7,31 @@ public class Money_Manager : MonoBehaviour
     public float money;
     public UImanager uimanager;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Si no se asignó en el Inspector, se busca automáticamente
+        if (uimanager == null)
+        {
+            uimanager = FindObjectOfType<UImanager>();
+        }
 
+        uimanager.UpdateMoneyTxt(money.ToString("F2"));
     }
 
     public void UpdateMoney(float moneyToAdd)
     {
+        // Evitar saldo negativo
         if (money + moneyToAdd < 0)
         {
-            money += moneyToAdd;
             return;
         }
-          money += moneyToAdd; 
-}
+
+        money += moneyToAdd;
+
+        // Actualizar la UI
+        if (uimanager != null)
+        {
+            uimanager.UpdateMoneyTxt(money.ToString("F2"));
+        }
     }
-  
+}
