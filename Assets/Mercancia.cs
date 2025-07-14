@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Mercancia : MonoBehaviour
 {
+   
+   public Mercancia mercancia;
     public float cost;
     public Money_Manager MoneyManager;
 
@@ -15,13 +17,14 @@ public class Mercancia : MonoBehaviour
             MoneyManager = FindObjectOfType<Money_Manager>();
         }
     }
-
-    void OnCollisionEnter(Collision collision)
+    void update()
     {
-        if (collision.gameObject.name == "Player")
-        {
-            MoneyManager.UpdateMoney(cost);
-            Destroy(gameObject);
-        }
+        if (Input.GetKeyDown(KeyCode.E))
+            if (mercancia)
+            {
+                MoneyManager = FindObjectOfType<Money_Manager>();
+            }
     }
+
+
 }

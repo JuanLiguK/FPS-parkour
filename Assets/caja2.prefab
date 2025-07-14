@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3797009525911759481}
   - component: {fileID: 3797009525909598820}
   - component: {fileID: 3797009525909598823}
-  - component: {fileID: 3797009525909598821}
   - component: {fileID: 3797009525909598818}
   m_Layer: 0
   m_Name: caja2
@@ -110,18 +109,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3797009525909598821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3797009525909501113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66091ebcca1f3f746ab2196b912bf4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3797009525909598818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4218f65ab12fa29498fe1d533cc15c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 0
+  MoneyManager: {fileID: 0}

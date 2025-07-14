@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Money_Manager : MonoBehaviour
 {
+    public Mercancia mercancia;
     public float money;
     public UImanager uimanager;
 
     void Start()
     {
-        // Si no se asignó en el Inspector, se busca automáticamente
+
         if (uimanager == null)
         {
             uimanager = FindObjectOfType<UImanager>();
@@ -20,18 +21,23 @@ public class Money_Manager : MonoBehaviour
 
     public void UpdateMoney(float moneyToAdd)
     {
-        // Evitar saldo negativo
-        if (money + moneyToAdd < 0)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            return;
-        }
+           
 
-        money += moneyToAdd;
+                if (money + moneyToAdd < 0)
+                {
+                    return;
+                }
 
-        // Actualizar la UI
-        if (uimanager != null)
-        {
-            uimanager.UpdateMoneyTxt(money.ToString("F2"));
+                money += moneyToAdd;
+
+
+                if (uimanager != null)
+                {
+                    uimanager.UpdateMoneyTxt(money.ToString("F2"));
+                }
+            
         }
     }
 }
