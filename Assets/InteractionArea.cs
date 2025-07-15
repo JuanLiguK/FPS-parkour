@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractionArea : MonoBehaviour
 {
+    public Money_Manager moneymanager;
     public GameObject InteractionMessage;
     public Mercancia mercancia;
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class InteractionArea : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
             if (mercancia)
             {
+                moneymanager.UpdateMoney(mercancia.cost);
                 Destroy(mercancia.gameObject);
                 StopInteraction();
             }
